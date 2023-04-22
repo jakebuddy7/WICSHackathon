@@ -1,3 +1,3 @@
-# skill-bridge
+# Math Mania
 
-Tutoring App Project
+Math Mania is a simple game that tests your math skills. 

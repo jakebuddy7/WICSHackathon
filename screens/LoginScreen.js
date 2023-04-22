@@ -29,7 +29,7 @@ const LoginScreen = () => {
               height: '100%',
               resizeMode: 'contain',
             }}
-            source={require('../assets/logos/tan.png')}
+            source={require('../assets/logos/symbol.png')}
           />
         </View>
       </View>
@@ -71,7 +71,7 @@ const LoginScreen = () => {
         <View style={styles.linkContainer}>
           <Text style={styles.linkText}>Forgot your password?</Text>
           <TouchableOpacity
-            onPress={() => navigation.navigate('RegisterScreen')}
+           // onPress={() => navigation.navigate('RegisterScreen')}
           >
             <Text style={styles.link}>Create an account</Text>
           </TouchableOpacity>

@@ -22,27 +22,21 @@ const InitialScreen = () => {
             height: '100%',
             resizeMode: 'contain',
           }}
-          source={require('../assets/logos/tan.png')}
+          source={require('../assets/logos/symbol.png')}
         />
         </View>
       </View>
-      <Text style={styles.title}>SkillBridge</Text>
+      <Text style={styles.title}>Math Mania</Text>
       <Text style={styles.subtitle}>
-        “Knowledge is power”
+        “The only way to learn mathematics is to do mathematics”
       </Text>
-      <Text style={styles.boop}>- Francis Bacon</Text>
+      <Text style={styles.boop}>- Paul Halmos</Text>
 
       <Pressable
         style={[styles.button, styles.loginButton]}
         onPress={() => navigation.navigate("LoginScreen")}
       >
-        <Text style={styles.buttonText}>Login</Text>
-      </Pressable>
-      <Pressable
-        style={[styles.button, styles.loginButton]}
-        onPress={() => navigation.navigate("RegisterScreen")}
-      >
-        <Text style={styles.buttonText}>Register</Text>
+        <Text style={styles.buttonText}>Enter</Text>
       </Pressable>
     </View>
   );

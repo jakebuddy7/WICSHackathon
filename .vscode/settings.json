@@ -1,4 +1,7 @@
 {
     "terminal.integrated.scrollback": 2000,
-    "css.lint.unknownAtRules": "ignore"
+    "css.lint.unknownAtRules": "ignore",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
 }

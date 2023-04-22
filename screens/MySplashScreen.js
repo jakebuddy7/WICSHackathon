@@ -5,7 +5,7 @@ import styles from '../styles';
 
 const MySplashScreen = () => {
   const blue = '#182640';
-  const tan = '#FAE8CD';  
+  const tan = '#ffffff';  
 
   return (
     <View style={[styles.container, {backgroundColor: tan}]}>
@@ -20,7 +20,7 @@ const MySplashScreen = () => {
               marginTop: 100,
               
             }}
-            source={require('../assets/logos/blue.png')}
+            source={require('../assets/logos/symbol.png')}
           />
         </View>
       </View>

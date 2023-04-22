@@ -16,7 +16,7 @@ module.exports = {
       gray_100: "#182640",
       gray_200: "rgba(255, 255, 255, 0)",
       gray_300: "#3c405b",
-      almond: "#fae8cd",
+      almond: "#D2B48C",
       blue: "rgba(191, 203, 255, 0.64)",
       white: "#fff",
     },
