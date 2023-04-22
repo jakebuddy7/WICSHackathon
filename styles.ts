@@ -3,7 +3,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 const blue = '#182640';
-const tan = '#FAE8CD';  
+const tan = '#D2B48C';  
 
 const styles = StyleSheet.create({
   picker: {

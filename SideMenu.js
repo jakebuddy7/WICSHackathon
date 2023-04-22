@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
       alignSelf: 'flex-end',
     },
     closeButtonText: {
-      color: '#FAE8CD',
+      color: '#D2B48C',
       fontSize: 30,
       fontFamily: 'Vikendi',
     },
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     buttonText: {
-      color: '#FAE8CD',
+      color: '#D2B48C',
       fontSize: 36,
       fontFamily: 'Vikendi',
     },

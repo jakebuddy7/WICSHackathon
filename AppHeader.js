@@ -4,7 +4,7 @@ import { Badge, Surface, Title } from 'react-native-paper';
 
 const IconSize = 24;
 const blue = '#182640';
-const tan = '#FAE8CD'; 
+const tan = '#D2B48C'; 
 const lightBlue = '#C9D3FF';
 
 const AppHeader = ({

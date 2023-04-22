@@ -84,7 +84,7 @@ const NavBarContainer = () => {
 const styles = StyleSheet.create({
   navigationBar: {
     flexDirection: "row",
-    backgroundColor: "#fae8cd",
+    backgroundColor: "#D2B48C",
     height: 92,
     justifyContent: "space-around",
     alignItems: "center",

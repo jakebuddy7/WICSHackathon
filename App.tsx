@@ -12,24 +12,10 @@ import * as SplashScreen from 'expo-splash-screen';
 import InitialScreen from './screens/InitialScreen';
 import MySplashScreen from './screens/MySplashScreen';
 import LoginScreen from './screens/LoginScreen';
-import RegisterScreen from './screens/RegisterScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import EditProfileScreen from './screens/EditProfileScreen';
-import HomeScreen from './screens/HomeScreen';
+
 import Drawer from 'react-native-drawer';
 import SideMenu from './SideMenu';
 import AppHeader from './AppHeader';
-import SubjectSearchScreen from './screens/SubjectSearchScreen';
-import AptRequestScreen from './screens/AptRequestScreen';
-import AppointmentsScreen from './screens/AppointmentsScreen';
-import RegisterInfoScreen from './screens/RegisterInfoScreen';
-import SubjectAddScreen from './screens/SubjectAddScreen';
-
-
-import VerifyEmail from './screens/VerifyEmail';
-import { AuthProvider } from './AuthContext';
-import {auth} from './firebase';
-import {onAuthStateChanged} from 'firebase/auth';
 
 import { useAccessibilityInfo } from '@react-native-community/hooks';
 
@@ -39,10 +25,10 @@ import { useNavigation } from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator();
 
-const blue = '#182640';
-const tan = '#FAE8CD'; 
+const blue = '#ffffff';
+const tan = '#D2B48C'; 
 const lightBlue = '#C9D3FF'; 
-
+//yellow: #D2B48C
 
 async function loadFonts() {
   await Font.loadAsync({
@@ -63,9 +49,7 @@ function App(): React.ReactElement{
 
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user)
-    })
+    
 
     const timer = setTimeout(() => {
       setHideSplashScreen(true);
@@ -91,14 +75,14 @@ function App(): React.ReactElement{
         headerTransparent: false,
         headerTintColor: '#D2B48C',
         headerShadowVisible: false,
-        headerStyle: { backgroundColor: '#fae8cd' },
+        headerStyle: { backgroundColor: '#D2B48C' },
         headerTitle: '',
         headerTitleAlign: 'center',
         header: (props) => (
           <AppHeader
             style
             back={false}
-            headerBg="#fae8cd"
+            headerBg="#D2B48C"
             iconColor="#182640"
             tintColor
             title="Home"
@@ -155,7 +139,7 @@ function App(): React.ReactElement{
     })}
   >
     <NavigationContainer>
-      <AuthProvider value={{currentUser, timeActive, setTimeActive}}>
+      
       <Stack.Navigator initialRouteName='InitialScreen'>
         <Stack.Screen name="MySplashScreen" component={MySplashScreen} options={{headerShown: false}} />
         <Stack.Screen name="InitialScreen" component={InitialScreen}
@@ -166,46 +150,10 @@ function App(): React.ReactElement{
         component={LoginScreen}
         options={getScreenOptions('external')}
       />
-        <Stack.Screen name="RegisterScreen" component={RegisterScreen}
-        options={getScreenOptions('external')} />
-        <Stack.Screen name="SubjectAddScreen" component={SubjectAddScreen}
-        options={getScreenOptions('external')} />
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={getScreenOptions('internal')}
-        />
-        <Stack.Screen name="RegisterInfoScreen" component={RegisterInfoScreen}
-        options={getScreenOptions('external')} />
-        <Stack.Screen name="VerifyEmail" component={VerifyEmail}
-        options={getScreenOptions('external')} />
-
-          <Stack.Screen
-            name="SubjectSearchScreen"
-            component={SubjectSearchScreen}
-            options={getScreenOptions('internal')}
-          />
-        <Stack.Screen
-            name="ProfileScreen"
-            component={ProfileScreen}
-        />
-        <Stack.Screen
-            name="EditProfileScreen"
-            component={EditProfileScreen}
-        />
-        <Stack.Screen
-            name="AptRequestScreen"
-            component={AptRequestScreen}
-            options={getScreenOptions('internal')}
-          />
-          <Stack.Screen
-            name="AppointmentsScreen"
-            component={AppointmentsScreen}
-            options={getScreenOptions('internal')}
-          />
+       
           
       </Stack.Navigator>
-      </AuthProvider>
+ 
     </NavigationContainer>
     </Drawer>
     
